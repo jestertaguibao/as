@@ -11,14 +11,31 @@
 </head>
 <body>
 
-<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search fruits..." data-inset="true">
-    <li><a href="#">Apple</a></li>
-    <li><a href="#">Banana</a></li>
-    <li><a href="#">Cherry</a></li>
-    <li><a href="#">Cranberry</a></li>
-    <li><a href="#">Grape</a></li>
- 
-</ul>
+		<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search fruits..." data-inset="true">
+
+		<?php
+		include('db_connect.php');
+		$sql = "SELECT * FROM title ORDER BY title_name ASC";
+		$result = $conn->query($sql);
+
+		    if ($result->num_rows > 0) {
+		        // output data of each row
+		        while($row = $result->fetch_assoc()) {
+		?>
+		             
+		          
+		    <li><a href="#"><?php echo $row["title_name"]; ?></h2></a></li>
+		  
+
+		<?php
+		        }
+		        } else {
+		            echo "0 results";
+		        }
+		$conn->close();
+
+		?>
+	</ul>
 
 </body>
 </html>
