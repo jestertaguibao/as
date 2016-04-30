@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title></title>
-<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0" >
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <!-- SCRIPT HERE -->
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
